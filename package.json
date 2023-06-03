@@ -1,0 +1,21 @@
+{
+  "name": "CrunchVilla",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "author": "shrinidhi joshi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "parcel": "^2.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
