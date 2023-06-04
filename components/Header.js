@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [btn, setBtn] = useState("Sign In / Sign up");
@@ -16,9 +17,19 @@ export const Header = () => {
 
       <div className="nav_items">
         <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
+          {/* here we have used <Link> tag it is provided by react-router library
+        it is similar ti <a> tag but <a> tag loads page when we click on defined path but 
+        <Link> tag will not refresh the page , it makes performace fast and UI looks clean
+        it is only applicable for client side routing   */}
+          <li> 
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About Us</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact Us</Link>
+          </li>
           <li>
             <button
               onClick={function () {
