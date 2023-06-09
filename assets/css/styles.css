@@ -86,3 +86,17 @@
   border-radius: 10px;
   margin-left: 20px;
 }
+
+.nav_items > ul > li > a{
+  text-decoration: none;
+  color: inherit;
+
+}
+.nav_items > ul > li > a:hover{
+  color: rgb(118, 88, 88);
+}
+
+.cards-link{
+  text-decoration: none;
+  color: inherit;
+}

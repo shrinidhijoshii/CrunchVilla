@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { useEffect, useState } from "react";
 import { Card } from "./Card";
 import { Shimmer } from "./Shimmer";
+import { Link } from "react-router-dom";
 
 export const Body = () => {
   console.log("body rendered");
@@ -85,7 +86,14 @@ export const Body = () => {
           // here course name is  given as key , it can be anything which will be diff for all cards
           // using loop index as a key is not recomended , ie [not using key < index as key < unique keys]
           filteredListOfRestaurnats.map(function (restaurant, index) {
-            return <Card key={restaurant.data.id} resData={restaurant} />;
+            return (
+              <Link className="cards-link"
+                key={restaurant.data.id}
+                to={`/restaurants/${restaurant.data.id}`}
+              >
+                <Card resData={restaurant} />
+              </Link>
+            );
           })
         }
       </div>
