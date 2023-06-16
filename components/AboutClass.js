@@ -1,5 +1,6 @@
 import React from "react";
 
+
 // it is functional based componant
 // export const About = () => {
 //   return (
@@ -14,6 +15,12 @@ import React from "react";
 //same thing is implemented using class based-component
 // Coomponent is the react class from which our is inheriting all the properties
 // we are using Coomponent class from react package like this React.Component
+// when class in instantiated first constructer is called , then render is called
+
+// import {Component} from "react"
+// class AboutClass extends Component {}
+// below calss can be written like this using array destructing
+
 
 class AboutClass extends React.Component {
   // to receive props from outside we need to add constructor for this class
@@ -29,6 +36,10 @@ class AboutClass extends React.Component {
       count1: 0,
       count2: 1,
     };
+  }
+
+  componentDidMount(){
+
   }
 
   render() {
@@ -55,3 +66,14 @@ class AboutClass extends React.Component {
 }
 
 export default AboutClass;
+
+
+// class based component life cycle
+// componentDidMoun() is a imp function inside the class like render()
+// order of execution of a class when class is instantiated
+// constructor -> render() - > componentDidMount()
+
+// example : when parent is also class based component and it has child which is also class based component 
+// order of execution is (or the life cycle)
+// parent-constructor -> parent-render() - > child-constructor -> child-render() 
+// - > child-componentDidMount() -> parent-componentDidMount()
