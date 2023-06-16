@@ -37,6 +37,18 @@ class AboutClass extends React.Component {
         <h3>Name : {this.props.name}</h3>
         <h3>Email : shrinidhijoshi99@gmail.com</h3>
         <h3>Twitter : shrinidhijoshi99</h3>
+        <p>count : {this.state.count1} - {this.state.count2}</p>
+        <button onClick={
+          () => {
+            // this is given by react , it can be used anywhere inside the class to update state
+            // - variables , it will accepts object which will contain updated state variables
+            // you can only pass variables need to be updated in this object not all variables defined in state object 
+              this.setState({
+                count1: this.state.count1 + 1,
+                count2: this.state.count2 + 2,
+              });
+          }
+        }>click me</button>
       </div>
     );
   }
