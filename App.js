@@ -31,7 +31,7 @@ const appRouter = createBrowserRouter([
       {
         // example of class based component 
         path: "/about",
-        element: <AboutClass />,
+        element: <AboutClass name={"Shrinidhi Joshi"} />,
       },
       {
         path: "/contact",
