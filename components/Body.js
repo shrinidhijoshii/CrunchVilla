@@ -25,6 +25,12 @@ export const Body = () => {
   useEffect(function () {
     fetchData();
     // [] is the dependency array - just to initialse the empty data
+
+    return () => {
+      // to unmount the things or clean you started for this page
+      // it works like component­Will­Unmount()
+    }
+
   }, []);
 
   const fetchData = async function () {
