@@ -19,8 +19,12 @@ export const Body = () => {
   // called once body element is rendered here , it will follow below methodology
   // when page loads -> body renders shimmer UI -> api-call will happen for data -> re-render page with data
   // it will increases the UX of the UI
+  // if we do not pass dependency array [] inside useeffect , useEffect will be called everytime when page loads/renders
+  // if we pass pass dependency array [] inside useeffect , useEffect will be called only when there is chnage in dependency array []
+  
   useEffect(function () {
     fetchData();
+    // [] is the dependency array - just to initialse the empty data
   }, []);
 
   const fetchData = async function () {
@@ -87,7 +91,8 @@ export const Body = () => {
           // using loop index as a key is not recomended , ie [not using key < index as key < unique keys]
           filteredListOfRestaurnats.map(function (restaurant, index) {
             return (
-              <Link className="cards-link"
+              <Link
+                className="cards-link"
                 key={restaurant.data.id}
                 to={`/restaurants/${restaurant.data.id}`}
               >

@@ -39,7 +39,7 @@ class AboutClass extends React.Component {
   }
 
   componentDidMount(){
-
+      
   }
 
   render() {
@@ -77,3 +77,14 @@ export default AboutClass;
 // order of execution is (or the life cycle)
 // parent-constructor -> parent-render() - > child-constructor -> child-render() 
 // - > child-componentDidMount() -> parent-componentDidMount()
+// for multiple children , react batches render() of multiple children [render phase] and then it will 
+// execute componentDidMount() of the multiple childern by batching again in this order 
+//-componentDidMount() of first child - > componentDidMount() of second child [commit phase]
+// -then componentDidMount() of parent & it is called react batch optimisation , it will make react fatser!!!
+// batching reduces number of DOM manipulation (it is very expensive opertaion) , react always tries to reduce
+// -number of DOM manipulation & it is achieved by batching 
+// refer this for detail https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+// componentDidMount() is a function is called once components are mounted or rendered on given UI
+// it is similar to useEffect() hook , as it also follows same pattern of life cycle
+// both are widely used to make API call
