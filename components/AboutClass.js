@@ -35,31 +35,46 @@ class AboutClass extends React.Component {
     this.state = {
       count1: 0,
       count2: 1,
+      userInfo :{
+
+      }
     };
   }
 
-  componentDidMount(){
-      
+  async componentDidMount(){
+
+    let response = await fetch("https://api.github.com/users/shiiijo");
+    let json = await response.json();
+    console.log(json);
+    this.setState({
+      userInfo:json
+    });
   }
 
   render() {
     return (
       <div className="about-card">
-        <h3>Name : {this.props.name}</h3>
-        <h3>Email : shrinidhijoshi99@gmail.com</h3>
-        <h3>Twitter : shrinidhijoshi99</h3>
-        <p>count : {this.state.count1} - {this.state.count2}</p>
-        <button onClick={
-          () => {
+        <img src={this.state.userInfo.avatar_url}></img>
+        <h4>{this.state.userInfo.name}</h4>
+        <h4>{this.state.userInfo.bio}</h4>
+        <h4>Email : shrinidhijoshi99@gmail.com</h4>
+        <h4>Twitter : {this.state.userInfo.twitter_username}</h4>
+        <p>
+          count : {this.state.count1} - {this.state.count2}
+        </p>
+        <button
+          onClick={() => {
             // this is given by react , it can be used anywhere inside the class to update state
             // - variables , it will accepts object which will contain updated state variables
-            // you can only pass variables need to be updated in this object not all variables defined in state object 
-              this.setState({
-                count1: this.state.count1 + 1,
-                count2: this.state.count2 + 2,
-              });
-          }
-        }>click me</button>
+            // you can only pass variables need to be updated in this object not all variables defined in state object
+            this.setState({
+              count1: this.state.count1 + 1,
+              count2: this.state.count2 + 2,
+            });
+          }}
+        >
+          click me
+        </button>
       </div>
     );
   }

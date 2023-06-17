@@ -100,3 +100,14 @@
   text-decoration: none;
   color: inherit;
 }
+
+.about-card{
+  margin: 20px;
+  text-align: center;
+  
+}
+
+.about-card > img {
+  height: 200px;
+  border-radius: 100px;
+}
