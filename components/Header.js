@@ -34,6 +34,9 @@ export const Header = () => {
             <Link to="/contact">Contact Us</Link>
           </li>
           <li>
+            <Link to="/instamart">InstaMart</Link>
+          </li>
+          <li>
             <button
               onClick={function () {
                 if (btn == "Sign In / Sign up") setBtn("Logout");
