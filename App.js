@@ -25,6 +25,11 @@ import { Shimmer } from "./components/Shimmer";
 // we can pass react inbuilt 'fallback' as prop which will show defined component before loading lazy component
 const InstaMart = lazy(() => import("./components/InstaMart"));
 
+
+// always do lazy loading outside the component , it means add lazy load code with the imports scope
+// for example here writing lazy load code inside AppLayout is wrong thing , add lazy load with other imports
+// if we add it wont improve the performance or it does not serve the purpose
+
 const AppLayout = () => {
   return (
     <div className="app">

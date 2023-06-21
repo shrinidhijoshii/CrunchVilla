@@ -12,3 +12,5 @@ Own api's will be consumned with the backend implementation.
 run ```npm install```
 
 run ```npm start```  to build the application locally 
+
+Refer this for theory notes https://github.com/chetannada/Namaste-React
