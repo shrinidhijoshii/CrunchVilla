@@ -2,9 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useOnline from "../utils/hooks/useOnline";
 
 export const Header = () => {
   const [btn, setBtn] = useState("Sign In / Sign up");
+
+  const isOnline = useOnline();
 
   return (
     <div className="header">
@@ -21,7 +24,7 @@ export const Header = () => {
         it is similar ti <a> tag but <a> tag loads page when we click on defined path but 
         <Link> tag will not refresh the page , it makes performace fast and UI looks clean
         it is only applicable for client side routing   */}
-          <li> 
+          <li>
             <Link to="/">Home</Link>
           </li>
           <li>
@@ -39,6 +42,9 @@ export const Header = () => {
             >
               {btn}
             </button>
+          </li>
+          <li>
+            <small>{isOnline ? "🟢 online" : "🔴 offline"}</small>
           </li>
         </ul>
       </div>

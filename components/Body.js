@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Card } from "./Card";
 import { Shimmer } from "./Shimmer";
 import { Link } from "react-router-dom";
-import useOnline from "../utils/hooks/useOnline";
 
 export const Body = () => {
   console.log("body rendered");
@@ -44,13 +43,6 @@ export const Body = () => {
     setFilteredListOfRestaurnats(resList);
     resList;
   };
-
-  const isOnline = useOnline();
-  console.log(isOnline);
-
-  if (!isOnline) {
-    return <h4>🔴 Your offline, please check the internet connection.</h4>;
-  }
 
   // conditional rendering
   if (listOfRestaurnats.length === 0) {
