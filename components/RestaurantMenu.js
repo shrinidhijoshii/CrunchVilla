@@ -1,13 +1,9 @@
 import { useEffect, useState } from "react";
 import { Shimmer } from "./Shimmer";
 import { useParams } from "react-router-dom";
+import useRestaurant from "../utils/hooks/useRestaurant";
 
 export const RestaurantMenu = () => {
-  const [resInfo, setResInfo] = useState(null);
-
-  useEffect(() => {
-    fetchRestaurantMenu();
-  }, []);
 
   // useParams is hook which gives parameters passed from the request url
   // params variable holds object , object will have key:value and key will be the name given 
@@ -15,14 +11,9 @@ export const RestaurantMenu = () => {
   const params = useParams();
   console.log(params.id)
 
-  async function fetchRestaurantMenu() {
-    const res = await fetch(
-      `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=${params.id}`
-    );
-    const json = await res.json();
-    console.log(json.data);
-    setResInfo(json.data);
-  }
+  const resInfo = useRestaurant(params.id);
+  console.log(resInfo)
+
   if (resInfo == null) {
     return <Shimmer />;
   }
