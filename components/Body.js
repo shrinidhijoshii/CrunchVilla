@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Card } from "./Card";
 import { Shimmer } from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnline from "../utils/hooks/useOnline";
 
 export const Body = () => {
   console.log("body rendered");
@@ -21,7 +22,7 @@ export const Body = () => {
   // it will increases the UX of the UI
   // if we do not pass dependency array [] inside useeffect , useEffect will be called everytime when page loads/renders
   // if we pass pass dependency array [] inside useeffect , useEffect will be called only when there is chnage in dependency array []
-  
+
   useEffect(function () {
     fetchData();
     // [] is the dependency array - just to initialse the empty data
@@ -29,8 +30,7 @@ export const Body = () => {
     return () => {
       // to unmount the things or clean you started for this page
       // it works like component­Will­Unmount()
-    }
-
+    };
   }, []);
 
   const fetchData = async function () {
@@ -44,6 +44,13 @@ export const Body = () => {
     setFilteredListOfRestaurnats(resList);
     resList;
   };
+
+  const isOnline = useOnline();
+  console.log(isOnline);
+
+  if (!isOnline) {
+    return <h4>🔴 Your offline, please check the internet connection.</h4>;
+  }
 
   // conditional rendering
   if (listOfRestaurnats.length === 0) {
