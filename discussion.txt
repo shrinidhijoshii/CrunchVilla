@@ -1,0 +1,19 @@
+System design tips
+
+1. talk about web app bundling and why it is necessary and explain why it makes web app fast
+and explain about lazy loading
+
+2. ask which type of styling to use for the components. if your choosing anything above another, tell pros and cons of rejected styling methods
+different ways to add css:
+a. native css
+b. inline css
+c. sass / scss 
+d. styled css (majorly used in react) - it is like jsx for css or writing css inside javscript
+https://styled-components.com/ & https://styled-components.com/docs/basics
+e. frameworks such as material UI , bootstrap , tailwind , chakra UI etc ..
+
+3.
+
+
+
+Tailwind Css
