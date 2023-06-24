@@ -51,17 +51,17 @@ export const Body = () => {
 
   return (
     <div className="body">
-      <div className="search-bar">
+      <div className="text-center m-5">
         <input
-          className="serach-input"
-          placeholder="Type here ..."
+          className="serach-input m-5 shadow-lg p-3 rounded-md"
+          placeholder="Search restaurtants ..."
           value={searchedText}
           onChange={(e) => {
             setSearchedText(e.target.value);
           }}
         />
         <button
-          className="search-submit"
+          className="shadow-lg p-3 rounded-md hover:bg-sky-100"
           onClick={function () {
             const filteredRestaurants = listOfRestaurnats.filter((res) => {
               return res.data.name
@@ -76,7 +76,7 @@ export const Body = () => {
           Search
         </button>
       </div>
-      <div className="courses">
+      <div className="flex flex-wrap">
         {
           //instead of using this repetative code for card , we can use loop as below
           /* <Card course_details={courses[0]} />
