@@ -21,8 +21,8 @@ export const About = () => {
   }, []);
 
   return (
-    <div className="about-card">
-      <img src={avatar}></img>
+    <div className="text-center m-10">
+      <img src={avatar} className="rounded-full ml-auto mr-auto m-20"></img>
       <h4>{name}</h4>
       <h4>{bio}</h4>
       <h4>Email : shrinidhijoshi99@gmail.com</h4>
