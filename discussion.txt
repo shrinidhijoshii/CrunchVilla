@@ -21,3 +21,8 @@ Tailwind Css
 - reusability
 - less bundle size(makes app faster)
 - flexible UI (we can customize acc to our need) - it is not allowed in material UI
+
+- tailwind css is library is installed with one more library it is postCss
+- postCss converts class names of tailwind css to normal css which is unnderstandable by browser
+- 'npx tailwindCss init' command will initialize our project to use tailwindCss
+- above will create config file , in which we need to do tail wind configuration

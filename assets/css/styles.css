@@ -1,4 +1,8 @@
-.header {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .header {
   display: flex;
   justify-content: space-between;
   border: 1px solid black;
@@ -110,4 +114,4 @@
 .about-card > img {
   height: 200px;
   border-radius: 100px;
-}
+} */
