@@ -26,3 +26,12 @@ Tailwind Css
 - postCss converts class names of tailwind css to normal css which is unnderstandable by browser
 - 'npx tailwindCss init' command will initialize our project to use tailwindCss
 - above will create config file , in which we need to do tail wind configuration
+- uses of tailwind
+ - no duplication of css
+ - easy to debug
+ - code is less and easy to use
+ - bundle size is small
+
+- cons
+ - it needs a decent learning before using
+ - code grows horizontally because of many class names and reduces readbility
