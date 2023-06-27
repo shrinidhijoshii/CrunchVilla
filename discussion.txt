@@ -35,3 +35,9 @@ Tailwind Css
 - cons
  - it needs a decent learning before using
  - code grows horizontally because of many class names and reduces readbility
+
+
+ Web app consits of two layers 
+ - UI layer 
+ - data layers
+ we recieve data from external world(via api calls) , that data within the application are maintained by state mangment and props
