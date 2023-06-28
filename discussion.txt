@@ -41,3 +41,6 @@ Tailwind Css
  - UI layer 
  - data layers
  we recieve data from external world(via api calls) , that data within the application are maintained by state mangment and props
+
+ Props Drilling:
+  - passing data as props from upper componenets to childern componenet and so on to grand child in heirarchy and this whole chain is called as PD
