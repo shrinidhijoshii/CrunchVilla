@@ -44,3 +44,10 @@ Tailwind Css
 
  Props Drilling:
   - passing data as props from upper componenets to childern componenet and so on to grand child in heirarchy and this whole chain is called as PD
+
+  props drilling is not recommended , if we are sharing data across more components, alternative to this we will use
+  context and redux store which makes data availability for all the componenets exists inside our app and data is maintained centrally
+  example is user info
+
+  1. context 
+  to achive this there are many libraries but react has its official library 

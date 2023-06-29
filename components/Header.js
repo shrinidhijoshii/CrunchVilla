@@ -1,13 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/hooks/useOnline";
+import UserContext from "../utils/userContext";
 
 export const Header = () => {
   const [btn, setBtn] = useState("Sign In / Sign up");
 
   const isOnline = useOnline();
+
+  const { user } = useContext(UserContext);
 
   return (
     <div className="lg:flex lg:justify-between shadow-md m-5 text-center">
@@ -46,6 +49,7 @@ export const Header = () => {
               {btn}
             </button>
           </li>
+          <li>{user.name}</li>
           <li>
             <small>{isOnline ? "🟢 online" : "🔴 offline"}</small>
           </li>
