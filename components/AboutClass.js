@@ -1,4 +1,5 @@
 import React from "react";
+import UserContext from "../utils/userContext";
 
 // it is functional based componant
 // export const About = () => {
@@ -19,6 +20,9 @@ import React from "react";
 // import {Component} from "react"
 // class AboutClass extends Component {}
 // below calss can be written like this using array destructing
+
+// we cannot use hooks in calss based components , so to use context in class based components
+// we need to use defined contexts as <Components> , refer below for details
 
 class AboutClass extends React.Component {
   // to receive props from outside we need to add constructor for this class
@@ -87,6 +91,12 @@ class AboutClass extends React.Component {
         >
           click me
         </button>
+        <UserContext.Consumer>
+          {(user) => {
+            console.log(user.name);
+            <h1>{user.name}</h1>
+          }}
+        </UserContext.Consumer>
       </div>
     );
   }
