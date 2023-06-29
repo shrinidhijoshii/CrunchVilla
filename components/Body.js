@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import ReactDOM from "react-dom/client";
 import { useEffect, useState } from "react";
 import { Card } from "./Card";
 import { Shimmer } from "./Shimmer";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/userContext";
 
 export const Body = () => {
   console.log("body rendered");
@@ -14,6 +15,20 @@ export const Body = () => {
   const [filteredListOfRestaurnats, setFilteredListOfRestaurnats] = useState(
     []
   );
+
+  // this is used from App.js , see the App.js for more idea
+  // using setUser() we can update the user deatils like this
+  // now on UI you will see user as User2
+  // uncomment below to see the updated User
+
+  // const { user, setUser } = useContext(UserContext);
+  // console.log(user);
+  // setUser({
+  //   name:"User3",
+  //   email:"demo.user3@gmail.com"
+  // });
+  // console.log(user);
+
 
   // useEffect is a react hook, the defined call-back fn defined in the useEffect will be
   // called once body element is rendered here , it will follow below methodology

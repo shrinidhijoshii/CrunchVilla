@@ -1,5 +1,5 @@
-import React from "react";
-import { lazy , Suspense } from "react";
+import React, { useState } from "react";
+import { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { Header } from "./components/Header";
 import { Body } from "./components/Body";
@@ -11,6 +11,7 @@ import { Error } from "./components/Error";
 import { RestaurantMenu } from "./components/RestaurantMenu";
 import { About } from "./components/About";
 import { Shimmer } from "./components/Shimmer";
+import UserContext from "./utils/userContext";
 
 //lazy loading - when we click on the componenet then only the related components are rendered
 //example when I click on instamart from header , then only related components are loaded for the first time.
@@ -25,17 +26,35 @@ import { Shimmer } from "./components/Shimmer";
 // we can pass react inbuilt 'fallback' as prop which will show defined component before loading lazy component
 const InstaMart = lazy(() => import("./components/InstaMart"));
 
-
 // always do lazy loading outside the component , it means add lazy load code with the imports scope
 // for example here writing lazy load code inside AppLayout is wrong thing , add lazy load with other imports
 // if we add it wont improve the performance or it does not serve the purpose
 
+// <UserContext.provider> we need to use to overide the exixting data in the defined context
+// assume below user data comes from api call dynamically later
+// wrapping <UserContext.provider> around all componenets makes sure , same data is available for all the wrapped contents
+// if any component is not wrapped using <UserContext.provider> , that particular component will consume initially defined demo user data
+// non-wrapping gives us the freedom to provide data to the desired component
+// <UserContext.provider> has value , it will take key-value pairs we can use to modify data
+
 const AppLayout = () => {
+  const [updatedUser, setUpdatedUser] = useState({
+    name: "User2",
+    email: "demo.user2@gmail.com",
+  });
+
   return (
     <div className="app">
-      <Header />
-      <Outlet />
-      <Footer />
+      <UserContext.Provider
+        value={{
+          user: updatedUser,
+          setUser : setUpdatedUser
+        }}
+      >
+        <Header />
+        <Outlet />
+        <Footer />
+      </UserContext.Provider>
     </div>
   );
 };
@@ -66,7 +85,7 @@ const appRouter = createBrowserRouter([
       {
         path: "/instamart",
         element: (
-          <Suspense fallback={<Shimmer/>}>
+          <Suspense fallback={<Shimmer />}>
             <InstaMart />
           </Suspense>
         ),
