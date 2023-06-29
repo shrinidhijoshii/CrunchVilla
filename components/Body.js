@@ -91,7 +91,7 @@ export const Body = () => {
           Search
         </button>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap ml-8 mr-8">
         {
           //instead of using this repetative code for card , we can use loop as below
           /* <Card course_details={courses[0]} />
