@@ -67,3 +67,6 @@ Tailwind Css
     to modify the slice data , this will give more control over data modification & extra layer of confirmation
   - "selector" is a function which used read slice data which is inside store , and UI element "subscribes" to the store 
      (it will make sure UI is always in auto-sync with the data which is stored in the slice)
+
+  - we installed two libraries @reduxjs/toolkit and react-redux , 1st library is to install core redux library which independent of frameworks
+    2nd library is to create bridge between redux and the react
