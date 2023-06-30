@@ -19,6 +19,7 @@ export const Body = () => {
   // this is used from App.js , see the App.js for more idea
   // using setUser() we can update the user deatils like this
   // now on UI you will see user as User2
+  // if any componenet modifies context , it will be changed for all componenets in the app
   // uncomment below to see the updated User
 
   // const { user, setUser } = useContext(UserContext);
