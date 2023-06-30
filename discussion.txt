@@ -12,7 +12,7 @@ d. styled css (majorly used in react) - it is like jsx for css or writing css in
 https://styled-components.com/ & https://styled-components.com/docs/basics
 e. frameworks such as material UI , bootstrap , tailwind , chakra UI etc ..
 
-3.
+3.talk about data handling methods & choose better when with proper reason
 
 
 
@@ -42,12 +42,28 @@ Tailwind Css
  - data layers
  we recieve data from external world(via api calls) , that data within the application are maintained by state mangment and props
 
- Props Drilling:
+(Data handling methods in webapp)
+ 1.Props Drilling:
   - passing data as props from upper componenets to childern componenet and so on to grand child in heirarchy and this whole chain is called as PD
 
   props drilling is not recommended , if we are sharing data across more components, alternative to this we will use
   context and redux store which makes data availability for all the componenets exists inside our app and data is maintained centrally
   example is user info
 
-  1. context 
-  to achive this there are many libraries but react has its official library 
+2.context 
+  to achive this there are many libraries but react has its official library
+
+3.Redux store
+  - for large applications managing multiple contextswill become difficult.
+  - previously in indudstries redux was in use , it was coomplex to setup and use & it needed initial learning about redux
+  but redux has built its simpler package called redux toolkit which is user friendly & industry standard
+  - more about why toolkit is introduced by redux https://redux-toolkit.js.org/introduction/getting-started#purpose
+
+  - at the end of the day redux store is big javascript object & it can be acessed by all the componenets as store is central place
+  - in context for multiple contexts we used to create different contexts but redux has everything in one big object
+  - store(object) will further contain slices (user slice , cart slice ....)
+  - if book is store , then pages are slices
+  - we cannot directly modify the slices , we need to perform some action (eg : dispatch action to update slice it is known as "reducer"), it will call reducer function to
+    to modify the slice data , this will give more control over data modification & extra layer of confirmation
+  - "selector" is a function which used read slice data which is inside store , and UI element "subscribes" to the store 
+     (it will make sure UI is always in auto-sync with the data which is stored in the slice)
