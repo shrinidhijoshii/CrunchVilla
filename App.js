@@ -12,6 +12,8 @@ import { RestaurantMenu } from "./components/RestaurantMenu";
 import { About } from "./components/About";
 import { Shimmer } from "./components/Shimmer";
 import UserContext from "./utils/userContext";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 //lazy loading - when we click on the componenet then only the related components are rendered
 //example when I click on instamart from header , then only related components are loaded for the first time.
@@ -45,16 +47,18 @@ const AppLayout = () => {
 
   return (
     <div className="app">
-      <UserContext.Provider
-        value={{
-          user: updatedUser,
-          setUser : setUpdatedUser
-        }}
-      >
-        <Header />
-        <Outlet />
-        <Footer />
-      </UserContext.Provider>
+      <Provider store={store}>
+        <UserContext.Provider
+          value={{
+            user: updatedUser,
+            setUser: setUpdatedUser,
+          }}
+        >
+          <Header />
+          <Outlet />
+          <Footer />
+        </UserContext.Provider>
+      </Provider>
     </div>
   );
 };
