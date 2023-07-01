@@ -17,7 +17,7 @@ export const Header = () => {
       <div className="logo-container">
         <img
           className="h-24 p-1 ml-auto mr-auto"
-          src="https://img.icons8.com/?size=512&id=BWZQnKohuZLV&format=png"
+          src="https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/c3e1073a-2db1-4049-b297-bda8c1a45be1.png"
         ></img>
       </div>
 
