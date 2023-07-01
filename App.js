@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import { Header } from "./components/Header";
 import { Body } from "./components/Body";
 import { Footer } from "./components/Footer";
+import Cart from "./components/Cart";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 // import AboutClass from "./components/AboutClass";
 import { Contact } from "./components/Contact";
@@ -85,6 +86,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurants/:id",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
       {
         path: "/instamart",

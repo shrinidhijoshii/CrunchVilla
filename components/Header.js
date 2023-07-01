@@ -43,7 +43,7 @@ export const Header = () => {
             <Link to="/instamart">InstaMart</Link>
           </li>
           <li>
-            <Link to="/instamart">Cart-{cartItems.length} items</Link>
+            <Link to="/cart">Cart-{cartItems.length} items</Link>
           </li>
           <li>
             <button
