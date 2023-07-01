@@ -70,3 +70,5 @@ Tailwind Css
 
   - we installed two libraries @reduxjs/toolkit and react-redux , 1st library is to install core redux library which independent of frameworks
     2nd library is to create bridge between redux and the react
+
+  - "useSelector" is react hook we will use to read data from the store 

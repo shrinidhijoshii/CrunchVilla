@@ -4,6 +4,7 @@ import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/hooks/useOnline";
 import UserContext from "../utils/userContext";
+import {useSelector} from "react-redux";
 
 export const Header = () => {
   const [btn, setBtn] = useState("Sign In / Sign up");
@@ -11,6 +12,8 @@ export const Header = () => {
   const isOnline = useOnline();
 
   const { user } = useContext(UserContext);
+
+  const cartItems = useSelector(store => store.cart.items);
 
   return (
     <div className="lg:flex lg:justify-between shadow-md m-5 text-center">
@@ -38,6 +41,9 @@ export const Header = () => {
           </li>
           <li>
             <Link to="/instamart">InstaMart</Link>
+          </li>
+          <li>
+            <Link to="/instamart">Cart-{cartItems.length} items</Link>
           </li>
           <li>
             <button
