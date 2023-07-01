@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Shimmer } from "./Shimmer";
 import { useParams } from "react-router-dom";
 import useRestaurant from "../utils/hooks/useRestaurant";
+import { addItem } from "../utils/cartSlice";
+import { useDispatch } from "react-redux";
 
 export const RestaurantMenu = () => {
   // useParams is hook which gives parameters passed from the request url
@@ -12,6 +14,13 @@ export const RestaurantMenu = () => {
 
   const resInfo = useRestaurant(params.id);
   console.log(resInfo);
+
+  const dispatch = useDispatch();
+  // always dispatch event follows this pattern - "dispatch(ation name(payload))"
+  const handleAddItem = (item) => {
+    console.log(item)
+    dispatch(addItem(item));
+  };
 
   if (resInfo == null) {
     return <Shimmer />;
@@ -60,6 +69,14 @@ export const RestaurantMenu = () => {
                   item.card.info.defaultPrice / 100}{" "}
               </p>
               <p>{item.card.info.description}</p>
+              <p>
+                <button
+                  className="bg-green-100 p-1 m-2"
+                  onClick={() => handleAddItem(item.card.info)}
+                >
+                  Add Item
+                </button>
+              </p>
             </li>
           ))}
         </ul>
