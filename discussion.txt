@@ -15,6 +15,9 @@ e. frameworks such as material UI , bootstrap , tailwind , chakra UI etc ..
 3.talk about data handling methods & choose better when with proper reason
 
 
+Important dev extensions
+1. react dev tools
+2. redux dev tools
 
 Tailwind Css
 - Css on the go (in the same files)
