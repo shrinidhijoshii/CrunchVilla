@@ -75,3 +75,26 @@ Tailwind Css
     2nd library is to create bridge between redux and the react
 
   - "useSelector" is react hook we will use to read data from the store 
+
+
+Testing :
+
+when we use ```create react app``` , 
+- internally it will use bundler to optimise
+- creates componenets testing configuration
+- 
+
+
+we have not used ```create react app```, implemented everything individually
+- for bundling , we used parcel
+- for testing we will use react testing library , which uses jest internally
+
+why we need testing?
+- to test whether new feature or componenet is breaking any other existing feature or componenets.
+
+types of testing :
+- Manual testing - actual person checks functionality by spending time & effort. it is not efficient.
+- Automated/Automation testing - code testing a code , eg: selenium
+- End-to-End testing - it covers entire user journey - it uses headless browser to test everything , eg:playwright , cypress - it is replacement of manual testing
+- Unit testing - it will test given unit / componenet working properly or not
+- Integration testing - it will test the integration between components are working properly or not, eg:after adding items from body ,item is added to cart or not & its visibe in cart page
