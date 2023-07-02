@@ -98,3 +98,8 @@ types of testing :
 - End-to-End testing - it covers entire user journey - it uses headless browser to test everything , eg:playwright , cypress - it is replacement of manual testing
 - Unit testing - it will test given unit / componenet working properly or not
 - Integration testing - it will test the integration between components are working properly or not, eg:after adding items from body ,item is added to cart or not & its visibe in cart page
+
+Jest 
+- To test javascript code we use jest framework
+- react testing library internally uses jest & react testing library is a child of testing library https://testing-library.com/docs/react-testing-library/intro/
+- 
