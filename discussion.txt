@@ -102,4 +102,3 @@ types of testing :
 Jest 
 - To test javascript code we use jest framework
 - react testing library internally uses jest & react testing library is a child of testing library https://testing-library.com/docs/react-testing-library/intro/
-- 
