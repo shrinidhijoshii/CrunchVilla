@@ -1,0 +1,13 @@
+/*
+all rc files accepts only json , they dont accepts javascripts 
+json and javascript objects are different they are not same
+
+this is javascript object :
+presets: [['@babel/preset-env', {targets: {node: 'current'}}]]
+
+below one is converted to the json
+*/
+
+{
+  "presets": [["@babel/preset-env", {"targets": {"node": "current"}}]]
+}

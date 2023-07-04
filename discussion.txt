@@ -18,6 +18,9 @@ e. frameworks such as material UI , bootstrap , tailwind , chakra UI etc ..
 Important dev extensions
 1. react dev tools
 2. redux dev tools
+3. json and javascript are not related
+ - json is different than javascript object both are not same (Do homework)
+4. .babelrc file takes all the babel configurations, this file only allows json not javascript
 
 Tailwind Css
 - Css on the go (in the same files)
