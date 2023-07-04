@@ -9,5 +9,11 @@ below one is converted to the json
 */
 
 {
-  "presets": [["@babel/preset-env", {"targets": {"node": "current"}}]]
+  "presets": [
+    // it will make to support "import" outside the browser
+    ["@babel/preset-env", { "targets": { "node": "current" } }],
+
+    // it will help to convert jsx to plain html in jsdom
+    ["@babel/preset-react", { "runtime": "automatic" }]
+  ]
 }
