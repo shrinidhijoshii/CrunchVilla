@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
 import ReactDOM from "react-dom/client";
-import { useEffect, useState } from "react";
 import { Card } from "./Card";
 import { Shimmer } from "./Shimmer";
 import { Link } from "react-router-dom";
