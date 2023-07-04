@@ -102,3 +102,12 @@ types of testing :
 Jest 
 - To test javascript code we use jest framework
 - react testing library internally uses jest & react testing library is a child of testing library https://testing-library.com/docs/react-testing-library/intro/
+
+Steps for configuration (for testing)
+1. installed these two packages
+ - ```npm install --save-dev @testing-library/react```
+ - ```npm i -D jest``` (its a pre-requisite lib for testing-library/react)
+2. create jest config file
+ - used this command to create config file with configuartion ```npx jest --init```
+ - we can use npm or npx , but we need to add config file only once so i have used npx command here (npx is used to execute the package for the first time & it will be one time work)
+ - npm will only install package
