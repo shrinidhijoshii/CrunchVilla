@@ -111,3 +111,7 @@ Steps for configuration (for testing)
  - used this command to create config file with configuartion ```npx jest --init```
  - we can use npm or npx , but we need to add config file only once so i have used npx command here (npx is used to execute the package for the first time & it will be one time work)
  - npm will only install package
+
+ 3. created test file
+  - as per industry standard we will use '.test.js' as suffix for file name , eg 'sum.test.js'.
+  - we can name it as 'sum.js' functionality wise it wont effect anything. it is just for good readiblity we will use '.test.js'
