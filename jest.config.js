@@ -89,7 +89,8 @@ const config = {
   // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  // here I will tell jest to replace any local image it finds in our web app with dummy image - it is because jest cannot decode the actual image
+  moduleNameMapper: {"\\.(png|jpg|svg)$":"../mocks/dummyLogo.js"},
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
