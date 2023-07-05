@@ -19,6 +19,7 @@ export const Header = () => {
     <div className="lg:flex lg:justify-between shadow-md m-5 text-center">
       <div className="logo-container">
         <img
+          data-testid="logo"
           className="h-24 p-1 ml-auto mr-auto"
           src="https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/c3e1073a-2db1-4049-b297-bda8c1a45be1.png"
         ></img>
