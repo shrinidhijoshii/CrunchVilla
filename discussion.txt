@@ -122,3 +122,7 @@ Steps for configuration (for testing)
 4. Important points
  - our test cases are running in jsdom environment (it is a small machine), it has render function which will render and load componenets
  - jsdom wont understand jsx directly , we need to use @babel/preset-react from babel which will convert jsx to html
+ - jsdom do not have <Provider> and store with in it , as we are using it with our componenets , we need to pass <Provider> & store to the testing component
+ - jsdom do not createBrowserRouter() which we used for routing in webapp ,createBrowserRouter() requires browser to work in jsdom .
+   we need to pass as a "StaticRouter" into the jsdom which does same as createBrowserRouter(). "StaticRouter" is imported from "react-router-dom/server" , it can work without browser
+ - when we run ```create react app``` command , behind the scenes it will do all these things and give us the ready web app with all the configurations we did
