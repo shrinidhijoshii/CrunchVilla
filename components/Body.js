@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { Card } from "./Card";
 import { Shimmer } from "./Shimmer";
 import { Link } from "react-router-dom";
-import UserContext from "../utils/userContext";
+import UserContext from "../utils/UserContext";
 
 export const Body = () => {
   console.log("body rendered");

@@ -12,7 +12,7 @@ import { Error } from "./components/Error";
 import { RestaurantMenu } from "./components/RestaurantMenu";
 import { About } from "./components/About";
 import { Shimmer } from "./components/Shimmer";
-import UserContext from "./utils/userContext";
+import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import store from "./utils/store";
 

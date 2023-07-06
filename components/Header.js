@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/hooks/useOnline";
-import UserContext from "../utils/userContext";
+import UserContext from "../utils/UserContext";
 import {useSelector} from "react-redux";
 
 export const Header = () => {
