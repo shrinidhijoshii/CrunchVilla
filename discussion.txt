@@ -126,3 +126,5 @@ Steps for configuration (for testing)
  - jsdom do not createBrowserRouter() which we used for routing in webapp ,createBrowserRouter() requires browser to work in jsdom .
    we need to pass as a "StaticRouter" into the jsdom which does same as createBrowserRouter(). "StaticRouter" is imported from "react-router-dom/server" , it can work without browser
  - when we run ```create react app``` command , behind the scenes it will do all these things and give us the ready web app with all the configurations we did
+ - fetch() is also browser api and it returns promise , jsdom does not understands fetch so we need to create mock fetch which returns dummy json using promises
+   instead of using fetch() we doing fake api call in jsdom

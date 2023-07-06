@@ -53,10 +53,9 @@ export const Body = () => {
     );
     const json = await data.json();
     console.log(json);
-    resList = json.data.cards[2].data.data.cards;
+    let resList = json.data.cards[2].data.data.cards;
     setListOfRestaurnats(resList);
     setFilteredListOfRestaurnats(resList);
-    resList;
   };
 
   // conditional rendering
