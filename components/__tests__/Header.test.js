@@ -4,6 +4,8 @@ import { Provider } from "react-redux";
 import store from "../../utils/store";
 import { StaticRouter } from "react-router-dom/server";
 
+
+// example of unit testing/ component
 test("Check header logo on page render", async () => {
   const header = render(
     <StaticRouter>
