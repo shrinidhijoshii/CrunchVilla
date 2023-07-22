@@ -14,3 +14,6 @@ run ```npm install```
 run ```npm start```  to build the application locally 
 
 Refer this for theory notes https://github.com/chetannada/Namaste-React
+
+## Deployemt 
+Web app is hosted on netlify , please have look https://crunchvilla.netlify.app
