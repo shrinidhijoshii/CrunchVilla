@@ -1,17 +1,19 @@
 # CrunchVilla
 
 ## About
+It's a food ordering web application built with React & nodejs.
 
-Its a food ordering web application build with react.
+## Frontend
 
-Currently there Iam using swiggy api for data flow.
+1. embedded live Swiggy API in my web app
+2. hooks used :
+   - useState, useEffect, useParams, useSearchParams 
+2. Used react-router-dom for routing
+3. Used redux store to handle data layer & sync of the data layer and UI layer
+4. Built search restaurants functionality
 
-Own api's will be consumned with the backend implementation.
+## Would you like to contribute? 
 
-## Want to contribute ?
+run ```npm install```
 
-run `npm install`
-
-run `npm start` to build the application locally
-
-Refer this for theory notes https://github.com/chetannada/Namaste-React
+run ```npm start```  to build the application locally 
