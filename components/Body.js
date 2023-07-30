@@ -29,7 +29,6 @@ export const Body = () => {
   // });
   // console.log(user);
 
-
   // useEffect is a react hook, the defined call-back fn defined in the useEffect will be
   // called once body element is rendered here , it will follow below methodology
   // when page loads -> body renders shimmer UI -> api-call will happen for data -> re-render page with data
@@ -53,7 +52,9 @@ export const Body = () => {
     );
     const json = await data.json();
     console.log(json);
-    let resList = json.data.cards[2].data.data.cards;
+    let resList =
+      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants;
     setListOfRestaurnats(resList);
     setFilteredListOfRestaurnats(resList);
   };
@@ -112,10 +113,10 @@ export const Body = () => {
             return (
               <Link
                 className="cards-link"
-                key={restaurant.data.id}
-                to={`/restaurants/${restaurant.data.id}`}
+                key={restaurant.info.id}
+                to={`/restaurants/${restaurant.info.id}`}
               >
-                <Card resData={restaurant} />
+                <Card resData={restaurant.info} />
               </Link>
             );
           })
